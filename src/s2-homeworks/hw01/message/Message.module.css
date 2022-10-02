@@ -1,0 +1,33 @@
+.message {
+
+}
+
+.imageAndText {
+display: flex;
+}
+
+.imageAndText img {
+    height: 48px;
+    width: 48px;
+
+}
+
+.text {
+
+}
+
+.text:after {
+
+}
+
+.name {
+
+}
+
+.messageText {
+
+}
+
+.time {
+
+}
