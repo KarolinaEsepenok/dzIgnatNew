@@ -10,12 +10,13 @@
 }
 
 .hw {
-
+margin-top: 20px;
 }
 
 .hwTitle {
     font-weight: 600;
     font-size: 22px;
     line-height: 105%;
+    margin-top: 50px;
 
 }
