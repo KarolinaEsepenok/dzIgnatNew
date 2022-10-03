@@ -11,7 +11,6 @@ type AffairPropsType = {
 
 function Affair(props: AffairPropsType) {
     const deleteCallback = () =>{props.deleteAffairCallback(props.affair._id)}
-
     const nameClass = s.name + ' ' + s2[props.affair.priority]
     const buttonClass = s.closeButton + ' ' + s2[props.affair.priority]
     const affairClass = s.affair + ' ' + s2[props.affair.priority]
@@ -20,7 +19,7 @@ function Affair(props: AffairPropsType) {
 
         <div id={'hw2-affair-' + props.affair._id}
             className={affairClass}
-        >{props.affair._id}
+        >
 
             <div id={'hw2-name-' + props.affair._id}
                  className={nameClass}>
