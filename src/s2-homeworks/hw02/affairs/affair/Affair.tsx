@@ -17,11 +17,13 @@ function Affair(props: AffairPropsType) {
     const affairClass = s.affair + ' ' + s2[props.affair.priority]
 
     return (
-        <div
-            id={'hw2-affair-' + props.affair._id}
+
+        <div id={'hw2-affair-' + props.affair._id}
             className={affairClass}
-        >{props.affair._id}
-            <div id={'hw2-name-' + props.affair._id} className={nameClass}>
+        >
+
+            <div id={'hw2-name-' + props.affair._id}
+                 className={nameClass}>
                 {props.affair.name}
 
                 {/**/}
@@ -36,13 +38,12 @@ function Affair(props: AffairPropsType) {
                 id={'hw2-button-delete-' + props.affair._id}
                 className={buttonClass} onClick={deleteCallback}
                 // need to fix
-
             >
                 {/*текст кнопки могут изменить студенты*/}
                 X
                 {/**/}
-            </button>
-        </div>
+            </button></div>
+
     )
 }
 
