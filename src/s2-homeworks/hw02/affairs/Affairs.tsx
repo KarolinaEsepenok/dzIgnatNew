@@ -27,10 +27,12 @@ function Affairs(props: AffairsPropsType) {
         // need to fix
     }
 
+
     const cnAll = s.button + ' ' + s.all + (props.filter === 'all' ? ' ' + s.active : '')
     const cnHigh = s.button + ' ' + s.high + (props.filter === 'high' ? ' ' + s.active : '')
     const cnMiddle = s.button + ' ' + s.middle + (props.filter === 'middle' ? ' ' + s.active : '')
     const cnLow = s.button + ' ' + s.low + (props.filter === 'low' ? ' ' + s.active : '')
+
 
     const mappedAffairs = props.data.map((a: AffairType) => (
         <Affair
@@ -43,6 +45,7 @@ function Affairs(props: AffairsPropsType) {
     return (
         <div>
             <div className={s.buttonContainer}>
+
                 <button
                     id={'hw2-button-all'}
                     onClick={setAll}
