@@ -20,7 +20,7 @@ function Affair(props: AffairPropsType) {
 
         <div id={'hw2-affair-' + props.affair._id}
             className={affairClass}
-        >
+        >{props.affair._id}
 
             <div id={'hw2-name-' + props.affair._id}
                  className={nameClass}>
