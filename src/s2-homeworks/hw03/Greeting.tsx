@@ -10,6 +10,7 @@ type GreetingPropsType = {
     error: string // need to fix any
     totalUsers:number // need to fix any
     lastUserName?: string// need to fix any
+
 }
 
 // презентационная компонента (для верстальщика)
@@ -23,6 +24,7 @@ const Greeting: React.FC<GreetingPropsType> = (
         error,
         totalUsers,
         lastUserName,
+
     } // деструктуризация пропсов
 ) => {
     const inputClass = error ? s.errorInput : s.input // need to fix with (?:)

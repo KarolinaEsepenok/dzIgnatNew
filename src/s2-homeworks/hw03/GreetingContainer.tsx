@@ -6,12 +6,13 @@ import {v1} from "uuid";
 type GreetingContainerPropsType = {
     users: UserType[] // need to fix any
     addUserCallback: (name: string) => void // need to fix any
+
 }
 
 export const pureAddUser = (name: string, setError: (error: string) => void, setName: (name: string) => void, addUserCallback: (name: string) => void) => {
     if (name === '') return setError('name is reguire')
     else {
-       addUserCallback(name)
+        addUserCallback(name)
         setName("")
     }
     // если имя пустое - показать ошибку, иначе - добавить юзера и очистить инпут
@@ -41,12 +42,12 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
     const [error, setError] = useState<string>('') // need to fix any
 
     const setNameCallback = (e: ChangeEvent<HTMLInputElement>) => {
-        const trimedName = e.currentTarget.value.trim()
-        if (trimedName) {
-            setName(trimedName)
-            error && setError('')
+        const newName = e.currentTarget.value.trim()
+        if (newName !== '') {
+            setName(newName)
+            //  error && setError('')
         } else {
-            name && setName('')
+            //  name && setName('')
             setError('name is require')
         }
         // need to fix any
@@ -66,7 +67,7 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
     }
 
     const totalUsers = users.length // need to fix
-    const lastUserName = name // need to fix
+    const lastUserName = users[users.length - 1] ? users[users.length - 1].name : ''  // need to fix
 
     return (
         <Greeting
