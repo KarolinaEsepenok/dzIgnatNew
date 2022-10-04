@@ -45,9 +45,9 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
         const newName = e.currentTarget.value.trim()
         if (newName !== '') {
             setName(newName)
-            //  error && setError('')
+             error && setError('')
         } else {
-            //  name && setName('')
+             name && setName('')
             setError('name is require')
         }
         // need to fix any
