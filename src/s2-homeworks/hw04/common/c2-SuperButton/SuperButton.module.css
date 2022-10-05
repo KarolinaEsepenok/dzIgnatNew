@@ -11,12 +11,14 @@
 }
 
 .red {
+    background-color: #CC1439;
 }
 
 .default:hover {
 }
 
 .red:hover {
+
 }
 
 .secondary:hover {
