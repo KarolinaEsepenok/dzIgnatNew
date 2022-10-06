@@ -1,24 +1,27 @@
 .sidebar {
     transition-duration: 1000ms;
+    display: none;
 
 }
 
 .sidebar.open {
     background-color: lightblue;
-    width: 300px;
-
+    display: flex;
 }
+
+
+
+
 
 .background {
 }
-
 .nav {
-    display: flex;
+
     flex-direction: column;
     font-size: 22px;
     font-weight: 600;
     line-height: 105%;
-
+  display: block;
 
 }
 
