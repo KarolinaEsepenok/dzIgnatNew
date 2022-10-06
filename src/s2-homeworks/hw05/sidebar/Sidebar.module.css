@@ -1,25 +1,44 @@
 .sidebar {
+
 }
 
 .sidebar.open {
+    background-color: lightblue;
+    width: 300px;
+
 }
 
 .background {
 }
 
 .nav {
+    display: flex;
+    flex-direction: column;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 105%;
+
 }
 
 .nav a {
+    text-decoration: none;
 }
 
 .nav a:hover {
+    text-decoration: #0066cc;
+    color: #0066cc;
 }
 
 .nav a.active {
+    text-decoration: #0059b3;
+
 }
+
 .close {
+    display: none;
+
 }
 
 .close img {
+
 }
