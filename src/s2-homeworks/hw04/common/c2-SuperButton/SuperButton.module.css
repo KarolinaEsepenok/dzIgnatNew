@@ -1,4 +1,6 @@
 .button {
+    background-color: #0066cc;
+
 }
 
 .disabled {
@@ -8,6 +10,7 @@
 }
 
 .default {
+    background-color: #0066cc;
 }
 
 .red {
@@ -15,6 +18,7 @@
 }
 
 .default:hover {
+    opacity: 0.8;
 }
 
 .red:hover {
