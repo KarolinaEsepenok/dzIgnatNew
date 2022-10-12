@@ -1,7 +1,8 @@
 .button {
     background-color: #0066cc;
-    width: 123px;
+    width: 132px;
     height: 30px;
+    border-radius: 3px;
 
 }
 
