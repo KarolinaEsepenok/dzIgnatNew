@@ -53,7 +53,7 @@ function Clock() {
                 onMouseEnter={onMouseEnter}
                 onMouseLeave={onMouseLeave}
             >
-                <span id={'hw9-day'}>{stringDay}</span>,{' '}
+                <span id={'hw9-day'}>{stringDay}</span>{' '}
                 <span id={'hw9-time'}>
                     <strong>{stringTime}</strong>
                 </span>
@@ -73,11 +73,10 @@ function Clock() {
                     )}
                 </div>
             </div>
-
             <div className={s.buttonsContainer}>
                 <SuperButton
                     id={'hw9-button-start'}
-                    disabled={false}
+                    disabled={!stop}
                   //  className={ ? s.disabled : '' + s.button}
                     // пишут студенты // задизэйблить если таймер запущен
                     onClick={start}
@@ -86,7 +85,7 @@ function Clock() {
                 </SuperButton>
                 <SuperButton
                     id={'hw9-button-stop'}
-                    disabled={false} // пишут студенты // задизэйблить если таймер не запущен
+                    disabled={!start} // пишут студенты // задизэйблить если таймер не запущен
                     onClick={stop}
                 >
                     stop
