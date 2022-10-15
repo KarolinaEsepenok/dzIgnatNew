@@ -10,20 +10,20 @@ function Clock() {
     const [show, setShow] = useState<boolean>(false)
 
     const start = () => {
-        clearInterval(timerId)
-
+        const id: number = +setInterval(() => {
+            setDate(new Date())
+            // setDate
+        }, 1000)
+        setTimerId(id)
+       //     const d = new Date()
+      //  return document.getElementById('timeID')
         // пишут студенты // запустить часы (должно отображаться реальное время, а не +1)
         // сохранить ид таймера (https://learn.javascript.ru/settimeout-setinterval#setinterval)
 
     }
 
     const stop = () => {
-        stop()
-        const id: number = +setInterval(() => {
-            setDate(new Date())
-            // setDate
-        }, 1000)
-        setTimerId(id)
+        clearInterval(timerId)
         // пишут студенты // поставить часы на паузу, обнулить ид таймера (timerId <- undefined)
 
     }
@@ -39,10 +39,11 @@ function Clock() {
 
     const stringTime =  date ?.toLocaleTimeString()  || <br/> // часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты
     const stringDate = date ?.toLocaleDateString()|| <br/> // день.месяц.год (01.02.2022) // пишут студенты, варианты 01.02.0123/01.02.-123/01.02.12345 не рассматриваем
-
+    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
     // день недели на английском, месяц на английском (https://learn.javascript.ru/intl#intl-datetimeformat)
-    const stringDay = date ?.toLocaleDateString() || <br/> // пишут студенты
-    const stringMonth = date ?.toLocaleString() || <br/> // пишут студенты
+    const stringDay = days[new Date().getDate()]; // пишут студенты
+    const stringMonth = months[new Date().getMonth()] // пишут студенты
 
     return (
         <div className={s.clock}>
