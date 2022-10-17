@@ -14,7 +14,7 @@ function Clock() {
             setDate(new Date())
             // setDate
         }, 1000)
-        setTimerId(id)
+        setTimerId(timerId)
        //     const d = new Date()
       //  return document.getElementById('timeID')
         // пишут студенты // запустить часы (должно отображаться реальное время, а не +1)
@@ -77,7 +77,7 @@ function Clock() {
             <div className={s.buttonsContainer}>
                 <SuperButton
                     id={'hw9-button-start'}
-                    disabled={false}
+                    disabled={timerId === null}
                     xType={'secondary' ? '' + s.secondary : s.button}
                   //  className={ ? s.disabled : '' + s.button}
                     // пишут студенты // задизэйблить если таймер запущен
@@ -87,7 +87,7 @@ function Clock() {
                 </SuperButton>
                 <SuperButton
                     id={'hw9-button-stop'}
-                    disabled={!start} // пишут студенты // задизэйблить если таймер не запущен
+                    disabled={timerId !== null} // пишут студенты // задизэйблить если таймер не запущен
                     onClick={stop}
                 >
                     stop

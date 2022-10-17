@@ -10,6 +10,7 @@
 }
 
 .secondary {
+    background-color: #cc9c00;
 }
 
 .default {
@@ -18,6 +19,7 @@
 
 .red {
     background-color: #CC1439;
+
 }
 
 .default:hover {
