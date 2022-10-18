@@ -15,8 +15,8 @@ function Clock() {
             // setDate
         }, 1000)
         setTimerId(id)
-       //     const d = new Date()
-      //  return document.getElementById('timeID')
+        //     const d = new Date()
+        //  return document.getElementById('timeID')
         // пишут студенты // запустить часы (должно отображаться реальное время, а не +1)
         // сохранить ид таймера (https://learn.javascript.ru/settimeout-setinterval#setinterval)
 
@@ -25,7 +25,7 @@ function Clock() {
     const stop = () => {
         clearInterval(timerId)
         // пишут студенты // поставить часы на паузу, обнулить ид таймера (timerId <- undefined)
-
+        setTimerId(undefined)
     }
 
     const onMouseEnter = () => {
@@ -37,13 +37,13 @@ function Clock() {
 
     }
 
-    const stringTime =  date ?.toLocaleTimeString()  || <br/> // часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты
-    const stringDate = date ?.toLocaleDateString()|| <br/> // день.месяц.год (01.02.2022) // пишут студенты, варианты 01.02.0123/01.02.-123/01.02.12345 не рассматриваем
+    const stringTime = date?.toLocaleTimeString() || <br/> // часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты
+    const stringDate = date?.toLocaleDateString() || <br/> // день.месяц.год (01.02.2022) // пишут студенты, варианты 01.02.0123/01.02.-123/01.02.12345 не рассматриваем
     const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
     const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturdays'];
     // день недели на английском, месяц на английском (https://learn.javascript.ru/intl#intl-datetimeformat)
     const stringDay = days[new Date().getDay()] || <br/>; // пишут студенты
-    const stringMonth = months[new Date().getMonth()]  || <br/> // пишут студенты
+    const stringMonth = months[new Date().getMonth()] || <br/> // пишут студенты
 
     return (
         <div className={s.clock}>
@@ -53,7 +53,7 @@ function Clock() {
                 onMouseEnter={onMouseEnter}
                 onMouseLeave={onMouseLeave}
             >
-                <span id={'hw9-day'}>{stringDay}</span>{' '}
+                <span id={'hw9-day'}>{stringDay},</span>{' '}
                 <span id={'hw9-time'}>
                     <strong>{stringTime}</strong>
                 </span>
@@ -77,9 +77,7 @@ function Clock() {
             <div className={s.buttonsContainer}>
                 <SuperButton
                     id={'hw9-button-start'}
-                    disabled={timerId === null }
-
-
+                    disabled={!!timerId}
                     // пишут студенты // задизэйблить если таймер запущен
                     onClick={start}
                 >
@@ -87,7 +85,7 @@ function Clock() {
                 </SuperButton>
                 <SuperButton
                     id={'hw9-button-stop'}
-                    disabled={false } // пишут студенты // задизэйблить если таймер не запущен
+                    disabled={!timerId} // пишут студенты // задизэйблить если таймер не запущен
                     onClick={stop}
                 >
                     stop
