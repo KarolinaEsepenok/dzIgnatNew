@@ -42,8 +42,8 @@ function Clock() {
     const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
     const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturdays'];
     // день недели на английском, месяц на английском (https://learn.javascript.ru/intl#intl-datetimeformat)
-    const stringDay = days[new Date().getDay()]; // пишут студенты
-    const stringMonth = months[new Date().getMonth()] // пишут студенты
+    const stringDay = days[new Date().getDay()] || <br/>; // пишут студенты
+    const stringMonth = months[new Date().getMonth()]  || <br/> // пишут студенты
 
     return (
         <div className={s.clock}>
