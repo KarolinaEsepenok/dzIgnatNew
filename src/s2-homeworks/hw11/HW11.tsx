@@ -17,12 +17,11 @@ function HW11() {
 //
 
     const change = (event: Event, value: number | number[], activeThumb?: number) => {
-if(valueArr === value){
-    setValue1(value1)
-    setValue2(value2)
-}else {
-    setValue1(value1)
-}
+      if  (typeof value === 'number') setValue1(value as number)
+        if(Array.isArray(value)){
+            setValue1(value[0])
+            setValue2(value[1])
+        }
         // пишет студент // если пришёл массив - сохранить значения в оба useState, иначе в первый
     }
 
