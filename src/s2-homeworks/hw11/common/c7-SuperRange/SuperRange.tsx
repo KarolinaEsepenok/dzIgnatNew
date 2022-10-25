@@ -7,8 +7,11 @@ const SuperRange: React.FC<SliderProps> = (props) => {
                 min={0}
                 max={100}
             sx={{ // стили для слайдера // пишет студент
-                mb: 1
-            } } valueLabelDisplay={'auto'}
+                mb: 1,color: '#000'
+
+            }}
+
+
             {...props} // отдаём слайдеру пропсы если они есть (value например там внутри)
         />
     )

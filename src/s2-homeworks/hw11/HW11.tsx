@@ -33,7 +33,7 @@ function HW11() {
                     <div className={s.wrapper}>
                         <span id={'hw11-value'} className={s.number}>{value1}</span>
                         <SuperRange
-                            id={'hw11-single-slider'} onChange={change}
+                            id={'hw11-single-slider'} onChange={change} value={value1}
                             // сделать так чтоб value1 изменялось // пишет студент
 
                         />
@@ -41,7 +41,7 @@ function HW11() {
                     <div className={s.wrapper}>
                         <span id={'hw11-value-1'} className={s.number}>{value1}</span>
                         <SuperRange
-                            id={'hw11-double-slider'} onChange={change}
+                            id={'hw11-double-slider'} onChange={change} value={[value1,value2]}
                             // сделать так чтоб value1/2 изменялось // пишет студент
 
                         />
