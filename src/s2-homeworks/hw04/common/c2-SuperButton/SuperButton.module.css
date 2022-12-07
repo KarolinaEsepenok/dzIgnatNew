@@ -6,7 +6,6 @@
     color: #FFFFFF;
     padding: 5px 24px;
     font-family: 'Montserrat';
-
 }
 
 .disabled {
@@ -29,6 +28,7 @@
 
 .default:hover {
     opacity: 0.8;
+    color: #FFFFFF;
 }
 
 .red:hover {
