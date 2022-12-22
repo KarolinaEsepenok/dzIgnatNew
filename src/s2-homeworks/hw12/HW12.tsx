@@ -43,6 +43,7 @@ return (
         </div>
 
         <div className={s2.hw}>
+            <div className={s.chooseTheme}>Выберите тему</div>
             <SuperSelect
                 id={'hw12-select-theme'}
                 className={s.select}

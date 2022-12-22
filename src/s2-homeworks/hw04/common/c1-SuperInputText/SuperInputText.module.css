@@ -5,6 +5,9 @@
 .input {
     width: 372px;
     height: 36px;
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 14px;
 }
 
 .inputWrapper {

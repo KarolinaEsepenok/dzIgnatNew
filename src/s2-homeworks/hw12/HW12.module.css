@@ -19,5 +19,9 @@ html {
 }
 
 .select {
+    font-family: Montserrat;
 
+}
+.chooseTheme{
+    margin-bottom: 14px;
 }

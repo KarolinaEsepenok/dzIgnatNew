@@ -1,6 +1,11 @@
 .buttonsContainer {
+    display: flex;
+
 }
 
+.buttonsContainer button{
+    margin-right: 24px;
+}
 .responseContainer {
 }
 
